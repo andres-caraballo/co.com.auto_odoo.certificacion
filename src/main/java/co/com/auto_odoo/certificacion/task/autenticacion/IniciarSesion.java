@@ -1,5 +1,6 @@
 package co.com.auto_odoo.certificacion.task.autenticacion;
 
+import co.com.auto_odoo.certificacion.interactions.valores.transversal.ObtenerValor;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -39,15 +40,6 @@ public class IniciarSesion implements Task {
                 Enter.theValue(usuario).into(INPUT_USUARIO),
                 Enter.theValue(clave).into(INPUT_CLAVE),
                 Click.on(BTN_LOGIN));
-//                Enter.theValue(correo).into(INPUT_CORREO),
-//                Click.on(DESPLEGAR_LISTA_DE_MES),
-//                Click.on(MES_DE_LA_LISTA.of("May")),
-//                Click.on(DESPLEGAR_LISTA_DE_DIAS),
-//                Click.on(DIA_DE_LA_LISTA.of("10")),
-//                Click.on(DESPLEGAR_LISTA_DE_ANIOS),
-//                Click.on(ANIO_DE_LA_LISTA.of("1990")),
-//                Click.on(BTN_NEXT_LOCATION_SIGUIENTE));
-
     }
 
 

@@ -1,7 +1,9 @@
 package co.com.auto_odoo.certificacion.utils.enums;
 
 public enum Urls {
-    URL_BASE("http://odoo16-piloto.odoo.bitsamericas.net/");
+    URL_BASE("https://bitsamericas-16-qa-9354535.dev.odoo.com/");
+//    URL_BASE("http://odoo16-demo.odoo.bitsamericas.net/");
+//    URL_BASE("http://odoo16-piloto.odoo.bitsamericas.net/");
 
 
     private final String url;

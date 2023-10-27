@@ -11,7 +11,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import co.com.auto_odoo.certificacion.questions.ElementoEsperado;
 import co.com.auto_odoo.certificacion.questions.autenticacion.ValidacionLoginExitoso;
 import co.com.auto_odoo.certificacion.task.autenticacion.IniciarSesion;
-import co.com.auto_odoo.certificacion.task.nomina.CerrarSesion;
+import co.com.auto_odoo.certificacion.task.autenticacion.CerrarSesion;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;
