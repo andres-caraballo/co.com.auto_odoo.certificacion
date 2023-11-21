@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 
 import static co.com.auto_odoo.certificacion.userInterface.nomina.PaginaCalculoDeSalario.*;
 import static co.com.auto_odoo.certificacion.userInterface.nomina.PaginaCalculoDeSalario.BRUTO;
+import static co.com.auto_odoo.certificacion.utils.enums.DatosDeEmpleados.RECORDAR_SALARIO_BRUTO;
 
 public class CapturarCalculoSalarioBruto implements Question<Double> {
 
@@ -29,6 +30,7 @@ public class CapturarCalculoSalarioBruto implements Question<Double> {
         if (salarioBruto==resultado){
             Ensure.that(salarioBruto).equals(resultado);
         }
+        actor.remember(RECORDAR_SALARIO_BRUTO.toString(), resultado);
         return resultado;
     }
 

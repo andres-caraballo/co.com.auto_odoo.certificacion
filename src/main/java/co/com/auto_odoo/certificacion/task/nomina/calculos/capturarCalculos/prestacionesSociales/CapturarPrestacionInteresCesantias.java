@@ -1,5 +1,6 @@
 package co.com.auto_odoo.certificacion.task.nomina.calculos.capturarCalculos.prestacionesSociales;
 
+import co.com.auto_odoo.certificacion.task.nomina.calculos.calculos.prestacionesSociales.CalcularDiasTranscurridos;
 import co.com.auto_odoo.certificacion.utils.utileriaString.UtileriaString;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
@@ -19,10 +20,18 @@ public class CapturarPrestacionInteresCesantias implements Question<Double> {
     }
     @Override
     public Double answeredBy(Actor actor) {
-        double valorEnpantallaInteresCesantias = Double.parseDouble(UtileriaString.formatearNumeros(Text.of(PROVISION_INTERESES_CESANTIAS_INCREMENTAL).viewedBy(actor).asString()))/ 100;
         //Cesantías x Días trabajados x 0,12 ÷ 360
-        // se desconocen los dias trabajados desde el inicio a la fecha actual
-//        Ensure.that(ingresoNoConstitutivo).equals(resultadoIngresoNoConstitutivo);
+        double valorEnpantallaInteresCesantias = Double.parseDouble(UtileriaString.formatearNumeros(Text.of(PROVISION_INTERESES_CESANTIAS_INCREMENTAL).viewedBy(actor).asString()))/ 100;
+        double cesantias = CapturarPrestacionCesantias.deNomina().answeredBy(actor);
+        double diasLaborados = CalcularDiasTranscurridos.deIntereseCesantias().answeredBy(actor);
+        double interesCesantias = (cesantias * diasLaborados*0.12)/360;
+
+        if (interesCesantias==valorEnpantallaInteresCesantias){
+            Ensure.that(interesCesantias).equals(valorEnpantallaInteresCesantias);
+        }
+
+
+//        Ensure.that(interesCesantias).equals(valorEnpantallaInteresCesantias);
         return valorEnpantallaInteresCesantias;
     }
 

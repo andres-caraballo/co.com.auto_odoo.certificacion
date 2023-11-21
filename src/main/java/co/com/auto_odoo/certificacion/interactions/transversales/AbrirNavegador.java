@@ -17,7 +17,7 @@ public class AbrirNavegador implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        System.setProperty("webdriver.chrome.driver", "/Users/AndresCaraballo/Documents/reto/co.com.auto_odoo.certificacion/src/test/resources/drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/Users/AndresCaraballo/Documents/Drivers/119.0.6045.105/chromedriver-win64/chromedriver-win64/chromedriver.exe");
         actor.attemptsTo(Open.url(String.valueOf(URL_BASE)));
     }
 }

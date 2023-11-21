@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 import static co.com.auto_odoo.certificacion.userInterface.nomina.PaginaCalculoDeSalario.*;
 import static co.com.auto_odoo.certificacion.userInterface.nomina.PaginaCalculoDeSalarioDeducciones.PORCENTAJE_DEDDUCION_PENSION;
 import static co.com.auto_odoo.certificacion.userInterface.nomina.PaginaCalculoDeSalarioDeducciones.PORCENTAJE_DEDDUCION_SALUD;
+import static co.com.auto_odoo.certificacion.utils.enums.DatosDeEmpleados.RECORDAR__VALOR_DEDUCCIONES_SALUD_PENSION;
 
 public class CapturarDeduccionesSaludPension implements Question<Double> {
 
@@ -32,6 +33,7 @@ public class CapturarDeduccionesSaludPension implements Question<Double> {
         boolean validacionPension = porcentajeDePension==deduccionPension;
 
         double totalDeduccionSaludPension = deduccionSalud + deduccionPension;
+        actor.remember(RECORDAR__VALOR_DEDUCCIONES_SALUD_PENSION.toString(),totalDeduccionSaludPension);
         return  totalDeduccionSaludPension;
     }
 

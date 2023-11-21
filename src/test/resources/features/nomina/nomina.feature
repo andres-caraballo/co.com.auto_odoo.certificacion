@@ -4,10 +4,16 @@
    yo como usuario de odoo deseo ingresar al modulo de nomina
    para validar sus funcionalidades del calculo de salario sin novedades
 
-   Escenario: Calcular salario de empleado sin novedades
+  Esquema del escenario: Calcular salario de empleado sin novedades
      Dado que Andres quiere ingresar con el usuario: admin y la clave: odoo16pailotSh2023*
-     Cuando el ingresa al modulo de Nómina para calcular la nomina de un empleado
+     Cuando el ingresa al modulo de Nómina para calcular la nomina del empleado DANIEL ALFONSO MATEUS ROA
      Entonces el podra visualizar que el resultado de los valores es correcto
+       | salarioBasico   | alimentacion   | conectividad   | salarioBruto   | ingConstitutivos   | ingNoConstitutivos   | aporteSolPensional   | salud   | pension   | netoPagar   | arl   | caja   | pensionEmpleador   | reteFuente   | cesantias   | intCesantias   | prima   | vacaciones   |
+       | <salarioBasico> | <alimentacion> | <conectividad> | <salarioBruto> | <ingConstitutivos> | <ingNoConstitutivos> | <aporteSolPensional> | <salud> | <pension> | <netoPagar> | <arl> | <caja> | <pensionEmpleador> | <reteFuente> | <cesantias> | <intCesantias> | <prima> | <vacaciones> |
+    Ejemplos:
+      | salarioBasico | alimentacion | conectividad | salarioBruto | ingConstitutivos | ingNoConstitutivos | aporteSolPensional | salud      | pension    | netoPagar    | arl       | caja       | pensionEmpleador | reteFuente | cesantias  | intCesantias | prima      | vacaciones |
+      | 4.480.000,00  | 960.000,00   | 960.000,00   | 6.400.000,00 | 4.480.000,00     | 1.920.000,00       | 537.600,00         | 179.200,00 | 179.200,00 | 6.037.600,00 | 23.400,00 | 179.200,00 | 537.600,00       | 4.000,00   | 373.333,33 | 153.066,66   | 373.331,84 | 186.666,67 |
+
 
 
   #-------------------------------- De momento hacen falta datos para calcular algunos valores --------------------------------#

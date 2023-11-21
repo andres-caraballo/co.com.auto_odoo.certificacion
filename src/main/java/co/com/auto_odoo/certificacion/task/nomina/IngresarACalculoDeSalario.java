@@ -6,6 +6,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.questions.Text;
 
@@ -27,6 +28,7 @@ public class IngresarACalculoDeSalario implements Task {
                 EsperarElemento.esVisible(SALARIO_BASICO_TOTAL)
         );
         double salarioBasicoTotal = Double.parseDouble(UtileriaString.formatearNumeros(Text.of(SALARIO_BASICO_TOTAL).viewedBy(actor).asString()))/ 100;
+        actor.attemptsTo(Scroll.to(BTN_CALCULO_DE_SALARIO));
         Ensure.that(salarioBase).equals(salarioBasicoTotal);
 
     }

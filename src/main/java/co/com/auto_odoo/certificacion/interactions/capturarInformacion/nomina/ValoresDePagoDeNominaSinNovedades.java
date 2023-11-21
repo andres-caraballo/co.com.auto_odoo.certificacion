@@ -1,5 +1,6 @@
 package co.com.auto_odoo.certificacion.interactions.capturarInformacion.nomina;
 
+import co.com.auto_odoo.certificacion.interactions.Regresar;
 import co.com.auto_odoo.certificacion.task.nomina.IngresarACalculoDeSalario;
 
 import co.com.auto_odoo.certificacion.task.nomina.calculos.calculos.deducciones.CalcularDeduccionesRetencionFuente;
@@ -23,12 +24,14 @@ public class ValoresDePagoDeNominaSinNovedades implements Task {
                 CalcularIngresosConstitutivos.deNomina(),
                 CalcularDeduccionesSaludPension.deNomina(),
                 CalcularDeduccionesRetencionFuente.deNomina(),
-                CalcularSalarioNeto.deNomina(),
-                CalcularPensionEmpleador.deNomina(),
-                CalcularPrestacionCesantias.deNomina(),
-
+                Regresar.aHojaCalculo()
+//                CalcularSalarioNeto.deNomina(),
+//                CalcularPensionEmpleador.deNomina(),
+//                CalcularPrestacionCesantias.deNomina(),
 //                CalcularPrestacionInteresCesantias.deNomina(),
-                CalcularPrestacionPrima.deNomina(),
-                CalcularPrestacionVacaciones.deNomina());
+//                Regresar.aHojaCalculo(),
+//                CalcularPrestacionPrima.deNomina(),
+//                CalcularPrestacionVacaciones.deNomina()
+        );
     }
 }

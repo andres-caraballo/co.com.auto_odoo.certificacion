@@ -20,9 +20,9 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'net.serenity-bdd.aggregator'
-//apply plugin: 'com.github.sherter.google-java-format'
+apply plugin: 'com.github.sherter.google-java-format'
 
-//compileJava.dependsOn 'googleJavaFormat'
+compileJava.dependsOn 'googleJavaFormat'
 
 
 tasks.withType(JavaCompile) {

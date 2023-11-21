@@ -25,8 +25,9 @@ public class CapturarSalarioNeto implements Question<Double> {
         double salarioNetoEnpantalla = Double.parseDouble(UtileriaString.formatearNumeros(Text.of(SALARIO_NETO).viewedBy(actor).asString()))/ 100;
         double valorDeduccionSaludPension = CapturarDeduccionesSaludPension.deNomina().answeredBy(actor);
         double valorSalarioBruto = CapturarCalculoSalarioBruto.deNomina().answeredBy(actor);
-        double valorReteFuente = actor.recall(RECORDAR_RETEFUENTE.toString());
-        double salarioNeto = valorSalarioBruto - valorDeduccionSaludPension - valorReteFuente;
+//        double valorReteFuente = actor.recall(RECORDAR_RETEFUENTE.toString());
+        double reteFuente = actor.recall(RECORDAR_RETEFUENTE.toString());
+        double salarioNeto = valorSalarioBruto - valorDeduccionSaludPension - reteFuente;
         actor.remember(RECORDAR_SALARIO_NETO.toString(), salarioNeto);
         boolean validacionSalariNeto = salarioNeto==salarioNetoEnpantalla;
 
@@ -35,10 +36,8 @@ public class CapturarSalarioNeto implements Question<Double> {
         }
 
         return Double.valueOf(salarioNeto +" "+ salarioNetoEnpantalla);
+//        return salarioNetoEnpantalla;
 //        return salarioNeto  + salarioNetoEnpantalla;
 
-
-
     }
-
 }
