@@ -5,6 +5,8 @@ public class CreateDatosNomina {
     private final String salarioBasico;
     private final String alimentacion;
     private final String conectividad;
+    private final String parqueadero;
+    private final String comisiones;
     private final String salarioBruto;
     private final String ingConstitutivos;
     private final String ingNoConstitutivos;
@@ -12,9 +14,6 @@ public class CreateDatosNomina {
     private final String salud;
     private final String pension;
     private final String netoPagar;
-
-
-
     private final String arl;
     private final String caja;
     private final String pensionSol;
@@ -28,6 +27,8 @@ public class CreateDatosNomina {
         this.salarioBasico = builder.getSalarioBasico();
         this.alimentacion = builder.getAlimentacion();
         this.conectividad = builder.getConectividad();
+        this.parqueadero = builder.getParqueadero();
+        this.comisiones = builder.getComisiones();
         this.salarioBruto = builder.getSalarioBruto();
         this.ingConstitutivos = builder.getIngConstitutivos();
         this.ingNoConstitutivos = builder.getIngNoConstitutivos();
@@ -49,6 +50,8 @@ public class CreateDatosNomina {
     public String getSalarioBasico() { return salarioBasico;}
     public String getAlimentacion() { return alimentacion;}
     public String getConectividad() {  return conectividad;}
+    public String getParqueadero() {  return parqueadero;}
+    public String getComisiones() {  return comisiones;}
     public String getSalarioBruto() {  return salarioBruto;}
     public String getIngConstitutivos() {  return ingConstitutivos;}
     public String getIngNoConstitutivos() {  return ingNoConstitutivos;}

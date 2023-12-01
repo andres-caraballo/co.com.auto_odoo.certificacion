@@ -18,13 +18,13 @@ public class ValoresDePagoDeNominaSinNovedades implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                IngresarACalculoDeSalario.deNomina(),
-                CalcularSalarioBruto.deNomina(),
-                CalcularIngresosNoConstitutivos.deNomina(),
-                CalcularIngresosConstitutivos.deNomina(),
-                CalcularDeduccionesSaludPension.deNomina(),
-                CalcularDeduccionesRetencionFuente.deNomina(),
-                Regresar.aHojaCalculo()
+                IngresarACalculoDeSalario.deNomina()
+//                CalcularSalarioBruto.deNomina(),
+//                CalcularIngresosNoConstitutivos.deNomina(),
+//                CalcularIngresosConstitutivos.deNomina(),
+//                CalcularDeduccionesSaludPension.deNomina(),
+//                CalcularDeduccionesRetencionFuente.deNomina(),
+//                Regresar.aHojaCalculo()
 //                CalcularSalarioNeto.deNomina(),
 //                CalcularPensionEmpleador.deNomina(),
 //                CalcularPrestacionCesantias.deNomina(),

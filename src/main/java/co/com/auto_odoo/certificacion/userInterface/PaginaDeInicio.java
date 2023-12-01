@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 public class PaginaDeInicio {
 
     public static final Target BTN_IDENTIFICARSE =Target.the("btn identificarse").located(By.xpath("(//*[contains(.,'Identificarse')])[last()]"));
+    public static final Target BTN_NEW_ODOO =Target.the("btn databse new Odoo").located(By.xpath("(//*[contains(@class,'d-block') and contains(.,'NewOdoo')])[1]"));
     public static final Target INPUT_USUARIO =Target.the("input usuario").located(By.xpath("//*[@id='login']"));
     public static final Target INPUT_CLAVE =Target.the("input clave").located(By.xpath("//*[@id='password']"));
     public static final Target BTN_LOGIN =Target.the("btn login").located(By.xpath("(//*[contains(.,'Iniciar Sesión')])[last()]"));

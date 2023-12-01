@@ -8,6 +8,8 @@ public class DatosNominaBuilder {
     private String salarioBasico;
     private String alimentacion;
     private String conectividad;
+    private String parqueadero;
+    private String comisiones;
     private String salarioBruto;
     private String ingConstitutivos;
     private String ingNoConstitutivos;
@@ -31,6 +33,8 @@ public class DatosNominaBuilder {
         return alimentacion;
     }
     public String getConectividad() {return conectividad; }
+    public String getParqueadero() {return parqueadero; }
+    public String getComisiones() {return comisiones; }
     public String getSalarioBruto() {return salarioBruto; }
     public String getIngConstitutivos() {return ingConstitutivos; }
     public String getIngNoConstitutivos() {return ingNoConstitutivos; }
@@ -92,6 +96,15 @@ public class DatosNominaBuilder {
     public DatosNominaBuilder conectividad (List<Map<String, String>> datos) {
         this.conectividad = datos.get(0).get("conectividad");
         return this; }
+
+    public DatosNominaBuilder parqueadero (List<Map<String, String>> datos) {
+        this.parqueadero = datos.get(0).get("parqueadero");
+        return this; }
+
+    public DatosNominaBuilder comisiones (List<Map<String, String>> datos) {
+        this.comisiones = datos.get(0).get("comisiones");
+        return this; }
+
 
     public DatosNominaBuilder salarioBruto (List<Map<String, String>> datos) {
         this.salarioBruto = datos.get(0).get("salarioBruto");

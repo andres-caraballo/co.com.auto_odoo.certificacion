@@ -4,6 +4,7 @@ import co.com.auto_odoo.certificacion.interactions.capturarInformacion.nomina.Ca
 import co.com.auto_odoo.certificacion.interactions.ingresarASubModulos.nomina.SeleccionarEmpleadoSinNovedades;
 import co.com.auto_odoo.certificacion.interactions.transversales.AbrirNavegador;
 import co.com.auto_odoo.certificacion.models.nomina.DatosNominaBuilder;
+import co.com.auto_odoo.certificacion.questions.nomina.ValidacionBonificaciónSalarial;
 import co.com.auto_odoo.certificacion.questions.nomina.ValidacionSinNovedades;
 import co.com.auto_odoo.certificacion.task.autenticacion.IniciarSesion;
 import co.com.auto_odoo.certificacion.task.transversal.IngresarAmodulo;
@@ -58,5 +59,30 @@ public class LoginStepDefinitions {
             .intCesantias(datos)
             .prima(datos)
             .vacaciones(datos))));
+    }
+
+    @Entonces("^el podra visualizar que el resultado de los valores es correcto segun salario con bonificación salarial$")
+    public void validacionDeValoresConBonificacion(List<Map< String, String>> datos) {
+        theActorInTheSpotlight().should(seeThat(ValidacionBonificaciónSalarial.deNomina(DatosNominaBuilder.con()
+                .salarioBasico(datos)
+                .alimentacion(datos)
+                .parqueadero(datos)
+                .conectividad(datos)
+                .comisiones(datos)
+                .salarioBruto(datos)
+                .ingConstitutivos(datos)
+                .ingNoConstitutivos(datos)
+                .aporteSolPensional(datos)
+                .salud(datos)
+                .pension(datos)
+                .netoPagar(datos)
+                .arl(datos)
+                .caja(datos)
+                .pensionEmpleador(datos)
+                .reteFuente(datos)
+                .cesantias(datos)
+                .intCesantias(datos)
+                .prima(datos)
+                .vacaciones(datos))));
     }
 }
