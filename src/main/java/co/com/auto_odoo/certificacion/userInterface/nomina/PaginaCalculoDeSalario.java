@@ -9,6 +9,7 @@ public class PaginaCalculoDeSalario {
     public static final Target DIAS_TRABAJADOS_Y_ENTRADAS=Target.the("Asistencia").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'Asistencia')]//*[@name='amount']"));
     public static final Target SALARIO_BASICO_TOTAL=Target.the("salario básico").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'SALARIO BÁSICO')]//*[@name='total']"));
     public static final Target PARQUEADERO=Target.the("salario básico").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'Parqueadero')]//*[@name='total']"));
+    public static final Target SUBSIDIO_DE_CONECTIVIDAD=Target.the("subsidio de conectividad").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'SUBSIDIO DE CONECTIVIDAD')]//*[@name='total']"));
     public static final Target COMISIONES=Target.the("salario básico").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'COMISIONES')]//*[@name='total']"));
 //    public static final Target SALARIO_BASICO_TOTAL_1=Target.the("salario básico pantalla inicial").located(By.xpath("//*[@class='o_data_row' and contains(.,'Salario básico total')]//*[@name='amount']"));
     public static final Target AUXILIO_NO_PRESTACIONAL_ALIMENTACION=Target.the("auxilio no prestacional alimentacion").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'AUXILIO NO PRESTACIONAL ALIMENTACION')]//*[@name='total']"));
@@ -33,6 +34,23 @@ public class PaginaCalculoDeSalario {
     public static final Target DIAS_TRABAJADOS=Target.the("dias trabajados mensual total").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'SALARIO BÁSICO')]//*[@name='quantity']"));
     public static final Target PORCENTAJE_PENSION_EMPLEADOR=Target.the("porcentaje pension empleador").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'PENSIÓN EMPLEADOR')]//*[@name='rate']"));
     public static final Target ULTIMA_FILA_DE_LA_HOJA=Target.the("ultima hoja de la fila").located(By.xpath("(//*[contains(@class,'o_data_cell')])[1]"));
+
+    public static final Target VACACIONES_HÁBILES=Target.the("Vacaciones Hábiles").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'VACACIONES HÁBILES')]//*[@name='total']"));
+    public static final Target VACACIONES_FESTIVOS=Target.the("Vacaciones Festivos").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'VACACIONES FESTIVOS')]//*[@name='total']"));
+    public static final Target PRIMA_LEGAL_SEMESTRE_2=Target.the("Prima Legal Semestre 2").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'PRIMA LEGAL SEMESTRE 2')]//*[@name='total']"));
+    public static final Target PRIMA_LEGAL_PROVISIONES_SEMESTRE_2=Target.the("Prima Legal Provisiones Semestre 2").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'PRIMA LEGAL PROVISIONES SEMESTRE 2')]//*[@name='total']"));
+    public static final Target BONO_PRIMA_EXTRALEGAL=Target.the("Bono Prima Extralegal").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'BONO PRIMA EXTRALEGAL')]//*[@name='total']"));
+    public static final Target PRIMA_EXTRALEGAL=Target.the("Prima Extralegal").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'PRIMA EXTRALEGAL')]//*[@name='total']"));
+    public static final Target CESANTIAS_DEFINITIVAS_ANUAL=Target.the("Cesantias Definitivas Anual").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'CESANTIAS DEFINITIVAS  ANUAL')]//*[@name='total']"));
+    public static final Target CESANTIAS_PROVISONES_ANUAL=Target.the("Cesantias Provisones Anual").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'CESANTIAS PROVISONES  ANUAL')]//*[@name='total']"));
+    public static final Target INTERESES_SOBRE_CESANTIAS_ANUAL=Target.the("Intereses Sobre Cesantias Anual").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'INTERESES SOBRE CESANTIAS  ANUAL')]//*[@name='total']"));
+    public static final Target INTERESES_CESANTIAS_PROVISONES_ANUAL=Target.the("Intereses Cesantias Provisones Anual").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'INTERESES CESANTIAS PROVISONES  ANUAL')]//*[@name='total']"));
+    public static final Target AJUSTE_DE_INTERESES_DE_CESANTÍAS=Target.the("Ajuste De Intereses De Cesantías").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'AJUSTE DE INTERESES DE CESANTÍAS')]//*[@name='total']"));
+    public static final Target AJUSTE_DE_CIERRE_SALARIAL=Target.the("Ajuste De Cierre Salarial").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'AJUSTE DE CIERRE SALARIAL')]//*[@name='total']"));
+    public static final Target PROVISION_DE_VACACIONES_ANUAL=Target.the("Provision De Vacaciones Anual").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'PROVISION DE VACACIONES ANUAL')]//*[@name='total']"));
+    public static final Target AJUSTE_FINAL=Target.the("Ajuste Final").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'AJUSTE FINAL')]//*[@name='total']"));
+    public static final Target PROVISION_DE_SV_DEFINITIVA_ANUAL=Target.the("Provision De Sv Definitiva Anual").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'PROVISION DE SV DEFINITIVA ANUAL')]//*[@name='total']"));
+    public static final Target PROVISION_DE_VACACIONES_DEFINITIVA_ANUAL=Target.the("Provision De Vacaciones Definitiva Anual").located(By.xpath("//*[contains(@class,'o_data_row') and contains(.,'PROVISION DE VACACIONES DEFINITIVA ANUAL')]//*[@name='total']"));
 
 
 }

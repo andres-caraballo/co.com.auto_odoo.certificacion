@@ -111,5 +111,4 @@ public class ValidacionBonificaciónSalarial implements Question {
         return true;
     }
 
-
 }

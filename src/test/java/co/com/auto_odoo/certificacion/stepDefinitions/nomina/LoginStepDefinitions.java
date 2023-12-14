@@ -5,6 +5,7 @@ import co.com.auto_odoo.certificacion.interactions.ingresarASubModulos.nomina.Se
 import co.com.auto_odoo.certificacion.interactions.transversales.AbrirNavegador;
 import co.com.auto_odoo.certificacion.models.nomina.DatosNominaBuilder;
 import co.com.auto_odoo.certificacion.questions.nomina.ValidacionBonificaciónSalarial;
+import co.com.auto_odoo.certificacion.questions.nomina.ValidacionNominaVacaciones;
 import co.com.auto_odoo.certificacion.questions.nomina.ValidacionSinNovedades;
 import co.com.auto_odoo.certificacion.task.autenticacion.IniciarSesion;
 import co.com.auto_odoo.certificacion.task.transversal.IngresarAmodulo;
@@ -84,5 +85,45 @@ public class LoginStepDefinitions {
                 .intCesantias(datos)
                 .prima(datos)
                 .vacaciones(datos))));
+    }
+
+    @Entonces("^el podra visualizar que el resultado de los valores es correcto segun salario con vacaciones$")
+    public void validacionDeValoresConVacaciones(List<Map< String, String>> datos) {
+        theActorInTheSpotlight().should(seeThat(ValidacionNominaVacaciones.deNomina(DatosNominaBuilder.con()
+                .salarioBasico(datos)
+                .alimentacion(datos)
+                .conectividad(datos)
+                .vacacionesHabiles(datos)
+                .vacacionesFestivos(datos)
+                .subConectividad(datos)
+                .salarioBruto(datos)
+                .primaLegalSem2(datos)
+                .primaLegalProvSem2(datos)
+                .bonoPrimaExtraLegal(datos)
+                .primaExtraLegal(datos)
+                .ingConstitutivos(datos)
+                .ingNoConstitutivos(datos)
+                .aporteSolPensional(datos)
+                .salud(datos)
+                .pension(datos)
+                .cesantiasDefAnual(datos)
+                .cesantiasProvAnual(datos)
+                .intCesantiasAnual(datos)
+                .intCesantiasProvAnual(datos)
+                .netoPagar(datos)
+                .arl(datos)
+                .caja(datos)
+                .pensionEmpleador(datos)
+                .ajusteIntCesantias(datos)
+                .ajusteCierreSalarial(datos)
+                .reteFuente(datos)
+                .cesantias(datos)
+                .intCesantias(datos)
+                .prima(datos)
+                .vacaciones(datos)
+                .vacacionesAnual(datos)
+                .ajusteFinal(datos)
+                .svDefANual(datos)
+                .vacacionesDefAnual(datos))));
     }
 }

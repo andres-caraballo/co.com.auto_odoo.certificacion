@@ -19,7 +19,7 @@ public class ValoresDePagoDeNominaSinNovedades implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 IngresarACalculoDeSalario.deNomina()
-//                CalcularSalarioBruto.deNomina(),
+            //    CalcularSalarioBruto.deNomina(),
 //                CalcularIngresosNoConstitutivos.deNomina(),
 //                CalcularIngresosConstitutivos.deNomina(),
 //                CalcularDeduccionesSaludPension.deNomina(),

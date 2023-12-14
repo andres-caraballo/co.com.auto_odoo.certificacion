@@ -8,9 +8,11 @@ public class DatosNominaBuilder {
     private String salarioBasico;
     private String alimentacion;
     private String conectividad;
+
+    private String subConectividad;
+    private String salarioBruto;
     private String parqueadero;
     private String comisiones;
-    private String salarioBruto;
     private String ingConstitutivos;
     private String ingNoConstitutivos;
     private String aporteSolPensional;
@@ -25,6 +27,25 @@ public class DatosNominaBuilder {
     private String intCesantias;
     private String prima;
     private String vacaciones;
+    private String vacacionesAnual;
+    private String ajusteFinal;
+    private String svDefANual;
+    private String vacacionesDefAnual;
+    private String cesantiasDefAnual;
+    private String cesantiasProvAnual;
+    private String intCesantiasAnual;
+    private String intCesantiasProvAnual;
+    private String vacacionesHabiles;
+    private String vacacionesFestivos;
+    private String primaLegalSem2;
+    private String primaLegalProvSem2;
+    private String bonoPrimaExtraLegal;
+    private String primaExtraLegal;
+    private String ajusteIntCesantias;
+    private String ajusteCierreSalarial;
+
+    public DatosNominaBuilder() {
+    }
 
     public String getSalarioBasico() {
         return salarioBasico;
@@ -33,6 +54,7 @@ public class DatosNominaBuilder {
         return alimentacion;
     }
     public String getConectividad() {return conectividad; }
+    public String getSubConectividad() {return subConectividad; }
     public String getParqueadero() {return parqueadero; }
     public String getComisiones() {return comisiones; }
     public String getSalarioBruto() {return salarioBruto; }
@@ -51,33 +73,87 @@ public class DatosNominaBuilder {
     public String getArl() {
         return arl;
     }
-
     public String getCaja() {
         return caja;
     }
-
     public String getPensionEmpleador() {
-        return pensionEmpleador;
-    }
-
+        return pensionEmpleador;    }
     public String getReteFuente() {
         return reteFuente;
     }
-
     public String getCesantias() {
         return cesantias;
     }
-
     public String getIntCesantias() {
         return intCesantias;
     }
-
     public String getPrima() {
         return prima;
     }
-
     public String getVacaciones() {
         return vacaciones;
+    }
+    public String getVacacionesAnual() {
+        return vacacionesAnual;
+    }
+
+    public String getAjusteFinal() {
+        return ajusteFinal;
+    }
+
+    public String getSvDefANual() {
+        return svDefANual;
+    }
+    public String getVacacionesDefAnual() {
+        return vacacionesDefAnual;
+    }
+
+    public String getCesantiasDefAnual() {
+        return cesantiasDefAnual;
+    }
+
+    public String getCesantiasProvAnual() {
+        return cesantiasProvAnual;
+    }
+
+    public String getIntCesantiasAnual() {
+        return intCesantiasAnual;
+    }
+
+    public String getIntCesantiasProvAnual() {
+        return intCesantiasProvAnual;
+    }
+
+    public String getVacacionesHabiles() {
+        return vacacionesHabiles;
+    }
+
+    public String getVacacionesFestivos() {
+        return vacacionesFestivos;
+    }
+
+    public String getPrimaLegalSem2() {
+        return primaLegalSem2;
+    }
+
+    public String getPrimaLegalProvSem2() {
+        return primaLegalProvSem2;
+    }
+
+    public String getBonoPrimaExtraLegal() {
+        return bonoPrimaExtraLegal;
+    }
+
+    public String getPrimaExtraLegal() {
+        return primaExtraLegal;
+    }
+
+    public String getAjusteIntCesantias() {
+        return ajusteIntCesantias;
+    }
+
+    public String getAjusteCierreSalarial() {
+        return ajusteCierreSalarial;
     }
 
 
@@ -95,6 +171,10 @@ public class DatosNominaBuilder {
 
     public DatosNominaBuilder conectividad (List<Map<String, String>> datos) {
         this.conectividad = datos.get(0).get("conectividad");
+        return this; }
+
+    public DatosNominaBuilder subConectividad (List<Map<String, String>> datos) {
+        this.subConectividad = datos.get(0).get("subConectividad");
         return this; }
 
     public DatosNominaBuilder parqueadero (List<Map<String, String>> datos) {
@@ -166,11 +246,70 @@ public class DatosNominaBuilder {
         this.vacaciones = datos.get(0).get("vacaciones");
         return this; }
 
+    public DatosNominaBuilder vacacionesAnual (List<Map<String, String>> datos) {
+        this.vacacionesAnual = datos.get(0).get("vacacionesAnual");
+        return this; }
+
+    public DatosNominaBuilder ajusteFinal (List<Map<String, String>> datos) {
+        this.ajusteFinal = datos.get(0).get("ajusteFinal");
+        return this; }
+
+    public DatosNominaBuilder svDefANual (List<Map<String, String>> datos) {
+        this.svDefANual = datos.get(0).get("svDefANual");
+        return this; }
+
+    public DatosNominaBuilder vacacionesDefAnual (List<Map<String, String>> datos) {
+        this.vacacionesDefAnual = datos.get(0).get("vacacionesDefAnual");
+        return this; }
+
+    public DatosNominaBuilder cesantiasDefAnual (List<Map<String, String>> datos) {
+        this.cesantiasDefAnual = datos.get(0).get("cesantiasDefAnual");
+        return this; }
+    public DatosNominaBuilder cesantiasProvAnual (List<Map<String, String>> datos) {
+        this.cesantiasProvAnual = datos.get(0).get("cesantiasProvAnual");
+        return this; }
+    public DatosNominaBuilder intCesantiasAnual (List<Map<String, String>> datos) {
+        this.intCesantiasAnual = datos.get(0).get("intCesantiasAnual");
+        return this; }
+
+    public DatosNominaBuilder intCesantiasProvAnual (List<Map<String, String>> datos) {
+        this.intCesantiasProvAnual = datos.get(0).get("intCesantiasProvAnual");
+        return this; }
+
+    public DatosNominaBuilder vacacionesHabiles (List<Map<String, String>> datos) {
+        this.vacacionesHabiles = datos.get(0).get("vacacionesHabiles");
+        return this; }
+
+    public DatosNominaBuilder vacacionesFestivos (List<Map<String, String>> datos) {
+        this.vacacionesFestivos = datos.get(0).get("vacacionesFestivos");
+        return this; }
+
+    public DatosNominaBuilder primaLegalSem2 (List<Map<String, String>> datos) {
+        this.primaLegalSem2 = datos.get(0).get("primaLegalSem2");
+        return this; }
+
+    public DatosNominaBuilder primaLegalProvSem2 (List<Map<String, String>> datos) {
+        this.primaLegalProvSem2 = datos.get(0).get("primaLegalProvSem2");
+        return this; }
+
+    public DatosNominaBuilder bonoPrimaExtraLegal (List<Map<String, String>> datos) {
+        this.bonoPrimaExtraLegal = datos.get(0).get("bonoPrimaExtraLegal");
+        return this; }
+
+    public DatosNominaBuilder primaExtraLegal (List<Map<String, String>> datos) {
+        this.primaExtraLegal = datos.get(0).get("primaExtraLegal");
+        return this; }
+
+    public DatosNominaBuilder ajusteIntCesantias (List<Map<String, String>> datos) {
+        this.ajusteIntCesantias = datos.get(0).get("ajusteIntCesantias");
+        return this; }
+
+    public DatosNominaBuilder ajusteCierreSalarial (List<Map<String, String>> datos) {
+        this.ajusteCierreSalarial = datos.get(0).get("ajusteCierreSalarial");
+        return this; }
 
     public CreateDatosNomina build() {
         return new CreateDatosNomina(this);
     }
-
-
 
 }
